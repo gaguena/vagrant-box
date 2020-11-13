@@ -24,13 +24,7 @@
 sudo chmod +x /usr/local/bin/docker-compose
 
 
-3. Restaurando o dump do mysql:
-
-
-	mysql -h127.0.0.1 -uroot -p -D lmva_db < lmva_db.dump.sql
-
-
-4. Executando docker-composer
+3. Executando docker-composer
 
 	docker-composer up -d
 
