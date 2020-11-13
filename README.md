@@ -1,4 +1,4 @@
-# Docker VA
+# Docker and VirtualBox
 
 1. Instalando docker
 
@@ -24,24 +24,17 @@
 sudo chmod +x /usr/local/bin/docker-compose
 
 
-3. Restaurando o dump do mysql:
-
-
-	mysql -h127.0.0.1 -uroot -p -D lmva_db < lmva_db.dump.sql
-
-
-4. Executando docker-composer
+3. Executando docker-composer
 
 	docker-composer up -d
 
-# vagrant-box
-
-Configurando Mail Fake
+# Configurando Mail Fake
 
 http://127.0.0.1:8025/#
 
+properties
 
-local.properties
 server=127.0.0.1
+
 port=1025
 
