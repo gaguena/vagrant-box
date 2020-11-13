@@ -1,0 +1,39 @@
+version: '3.3'
+
+services:
+ db:
+  image: mysql:5.7
+  container_name: mysql-server
+  environment:
+   MYSQL_ROOT_PASSWORD: Brasil04
+  ports:
+   - 3306:3306
+  command: ["mysqld", "--default-authentication-plugin=mysql_native_password"]
+  volumes:
+    - ./data/mysql:/etc/mysql/conf.d
+  networks: 
+    - vagrant
+
+ mailhog:
+  container_name: mailhog
+  image: mailhog/mailhog
+  ports: 
+   - 1025:1025
+   - 8025:8025
+  networks: 
+   - vagrant
+
+ oracle-db:
+  image: oracleinanutshell/oracle-xe-11g
+  container_name: oracle-xe
+  environment:
+   - ORACLE_ENABLE_XDB=true
+  ports:
+   - 1521:1521
+   - 5500:5500
+   - 8181:8080
+  networks: 
+   - vagrant
+
+networks: 
+ vagrant:
