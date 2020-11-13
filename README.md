@@ -32,8 +32,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 http://127.0.0.1:8025/#
 
+properties
 
-local.properties
 server=127.0.0.1
+
 port=1025
 
