@@ -35,3 +35,13 @@ sudo chmod +x /usr/local/bin/docker-compose
 	docker-composer up -d
 
 # vagrant-box
+
+Configurando Mail Fake
+
+http://127.0.0.1:8025/#
+
+
+local.properties
+server=127.0.0.1
+port=1025
+
