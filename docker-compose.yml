@@ -34,6 +34,16 @@ services:
    - 8181:8080
   networks: 
    - vagrant
+ mongodb:
+  image: tutum/mongodb
+  container_name: mongodb
+  environment:
+   - AUTH=no
+  ports:
+   - 27017:27017
+   - 28017:28017
+  volumes:
+   - ./data/mondb:/data/db
 
 networks: 
  vagrant:
