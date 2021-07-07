@@ -10,10 +10,19 @@ services:
    - 3306:3306
   command: ["mysqld", "--default-authentication-plugin=mysql_native_password"]
   volumes:
-    - ./data/mysql:/etc/mysql/conf.d
+   - ./data/mysql:/etc/mysql/conf.d
+  networks: 
+   - vagrant
+
+ postgres-db:
+  image: postgres
+  container_name: postgres-server
+  environment:
+   - POSTGRES_PASSWORD=Brasil04
+  ports:
+   - 5432:5432
   networks: 
     - vagrant
-
  mailhog:
   container_name: mailhog
   image: mailhog/mailhog
