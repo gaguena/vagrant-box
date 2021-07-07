@@ -1,1 +1,5 @@
 .vagrant
+data/*.sql
+*.gz
+data/mondb
+*.zip
