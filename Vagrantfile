@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   #config.vm.network "public_network", ip: "192.168.1.10", bridge: "wlp3s0"
   #config.vm.network "public_network", ip: "192.168.1.10", bridge: "wlp2s0"
   #config.vm.network "private_network", ip: "192.168.1.10"
-  config.vm.synced_folder "D:/work", "/vagrant_data"
+  config.vm.synced_folder "/opt/data/work", "/vagrant_data"
 
   #config.vm.network "forwarded_port", guest: 3306, host: 3306
   config.vm.network :forwarded_port, guest: 3306, host: 3306

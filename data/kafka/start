@@ -1,0 +1,7 @@
+docker start control-center ksql-datagen ksqldb-cli ksqldb-server connect rest-proxy schema-registry broker zookeeper
+
+docker stop control-center ksql-datagen ksqldb-cli ksqldb-server connect rest-proxy schema-registry broker zookeeper
+
+
+
+docker container rm $(docker container ls -a -q)
